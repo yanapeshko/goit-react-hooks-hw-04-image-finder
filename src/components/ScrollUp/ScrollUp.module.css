@@ -1,0 +1,29 @@
+.toTop {
+  color: white;
+  padding-top: 1.8em;
+  display: inline-block;
+  position: relative;
+  border-color: white;
+  text-decoration: none;
+}
+.toTop:before {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  content: '\go up';
+  font-size: 1em;
+  position: absolute;
+  top: -50%;
+  left: 50%;
+  margin-left: -0.7em;
+  border: solid 0.3em white;
+  border-radius: 8em;
+  width: 3.8em;
+  height: 3.8em;
+  line-height: 1.3em;
+  border-color: inherit;
+}
+.toTop:hover {
+  color: #6fadc0;
+  border-color: #6fadc0;
+}

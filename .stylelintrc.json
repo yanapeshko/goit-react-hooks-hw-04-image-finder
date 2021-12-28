@@ -1,0 +1,19 @@
+{
+    "extends": [
+        "stylelint-config-standard",
+        "stylelint-order"
+    ],
+    "plugins": [
+        "stylelint-order"
+    ],
+    "rules": {
+        "order/order": [
+            "custom-properties",
+            "declarations"
+        ],
+        "order/properties-order": [
+            "width",
+            "height"
+        ]
+    }
+}

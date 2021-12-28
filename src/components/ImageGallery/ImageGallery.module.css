@@ -1,0 +1,24 @@
+.enterData {
+  text-align: center;
+  font-size: 80px;
+  color: #fff;
+  animation: animate_grow 2s infinite;
+}
+.form_button:hover {
+  -webkit-box-shadow: 2px 8px 31px 5px rgba(34, 60, 80, 0.2);
+  -moz-box-shadow: 2px 8px 31px 5px rgba(34, 60, 80, 0.2);
+  box-shadow: 2px 8px 31px 5px rgba(34, 60, 80, 0.2);
+  color: aliceblue;
+  animation: none;
+}
+@keyframes animate_grow {
+  0% {
+    transform: scale3d(1, 1, 1);
+  }
+  50% {
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+  100% {
+    transform: scale3d(1, 1, 1);
+  }
+}

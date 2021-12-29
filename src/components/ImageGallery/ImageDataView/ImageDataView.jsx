@@ -6,7 +6,7 @@ import s from './ImageDataView.module.css';
 
 export default function ImageDataView({ imagesArray, openModal, loadMore }) {
   return (
-    <>
+    <div div className={s.box}>
       <ul className={s.gallery}>
         {imagesArray.map(({ id, webformatURL, largeImageURL, tags }) => (
           <li key={id} className={s.galleryItem}>
@@ -20,7 +20,7 @@ export default function ImageDataView({ imagesArray, openModal, loadMore }) {
         ))}
       </ul>
       <InfiniteScrl imagesArray={imagesArray} loadMore={loadMore} />
-    </>
+    </div>
   );
 }
 

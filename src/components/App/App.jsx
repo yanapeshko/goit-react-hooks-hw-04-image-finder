@@ -31,7 +31,7 @@ export default function App() {
       </Section>
 
       {showModal && <Modal onClose={toggleModal} modalImg={modalImg} />}
-      <ToastContainer autoClose={3000} />
+      <ToastContainer autoClose={2000} />
     </>
   );
 }

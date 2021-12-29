@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { toast } from 'react-toastify';
 import ImageDataView from './ImageDataView';
 import ImagePending from './ImagePending';
-import { fetchImages } from '../../services/imagesApi';
+import { fetchArticles } from '../../services/pixabayApi';
 import s from './ImageGallery.module.css';
 
 const Status = {
@@ -32,17 +32,16 @@ export default function ImageGallery({ imageName, openModal }) {
       setStatus(Status.PENDING);
 
       const { hits: newImagesArray, totalHits: totalImages } =
-        await fetchImages(imageName, page);
+        await fetchArticles(imageName, page);
       if (newImagesArray.length === 0 && totalImages === 0) {
-        toast.error('Oops nothing found');
+        toast.error('Sorry nothing found');
         return;
       }
       if (newImagesArray.length === 0 && totalImages !== 0) {
         toast.warning('Nothing more found');
         return;
       }
-      console.log(page);
-      console.log(imageName);
+
       if (page === 1) {
         toast.success(`Found ${totalImages} images`);
       }

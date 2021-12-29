@@ -9,7 +9,7 @@ export default function ImagePending() {
       color="#47acce"
       height={500}
       width={500}
-      timeout={3000}
+      timeout={2000}
     />
   );
 }

@@ -13,7 +13,7 @@ const getImages = axios.create({
   },
 });
 
-export async function fetchImages(q, page) {
+export async function fetchArticles(q, page) {
   try {
     const { data } = await getImages('', { params: { q, page } });
     return data;

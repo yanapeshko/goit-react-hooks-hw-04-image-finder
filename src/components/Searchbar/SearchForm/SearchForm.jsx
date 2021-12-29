@@ -6,15 +6,15 @@ import s from './SearchForm.module.css';
 export default function SearchForm({ onSubmit }) {
   const [imageName, setImageName] = useState('');
 
-  const handleNameChange = evt => {
-    setImageName(evt.currentTarget.value.toLowerCase());
+  const handleNameChange = e => {
+    setImageName(e.currentTarget.value.toLowerCase());
   };
 
-  const handleSubmit = evt => {
-    evt.preventDefault();
+  const handleSubmit = e => {
+    e.preventDefault();
 
     if (imageName.trim() === '') {
-      toast.warning('Enter sth');
+      toast.warning('Enter data');
       return;
     }
 

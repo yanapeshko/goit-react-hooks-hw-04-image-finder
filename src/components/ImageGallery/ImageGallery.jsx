@@ -1,4 +1,4 @@
-import { useState, useLayoutEffect } from 'react';
+import { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { toast } from 'react-toastify';
 import ImageDataView from './ImageDataView';
@@ -19,7 +19,7 @@ export default function ImageGallery({ imageName, openModal }) {
   const [page, setPage] = useState(1);
   const [status, setStatus] = useState(Status.IDLE);
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     if (!imageName) {
       return;
     }
@@ -43,7 +43,7 @@ export default function ImageGallery({ imageName, openModal }) {
       }
 
       if (page === 1) {
-        toast.success(`Found ${totalImages} images`);
+        // toast.success(`Found ${totalImages} images`);
       }
       setImagePrevName(imageName);
       setImagesArray([...imagesArray, ...newImagesArray]);
